@@ -3,12 +3,6 @@ import cors from 'cors'
 
 
 const app = express();
-app.use(express.static(path.join(__dirname, "dist")));
-
-// Handle client-side routing
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
-});
 
 app.use(
     cors({
